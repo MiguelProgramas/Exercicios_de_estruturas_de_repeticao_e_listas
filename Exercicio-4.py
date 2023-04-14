@@ -1,15 +1,16 @@
-População_A = 80000
-Crescimento_A = 1.03
+from decimal import Decimal
 
-População_B = 200000
-Crescimento_B = 1.015
+população_A =  Decimal(80000.0)
+crescimento_A =  Decimal(1.03)
 
-Anos_Necessários = 0
+população_B =  Decimal(200000.0)
+crescimento_B = Decimal( 1.015)
 
-while População_A < População_B:
-    População_A = População_A + (População_A*Crescimento_A)
-    População_B = População_B + (População_B*Crescimento_B)
-    Anos_Necessários += 1
+anos_Necessários = 0
 
-print(Anos_Necessários)
+while população_A <= população_B:
+    população_A = população_A*crescimento_A
+    população_B = população_B*crescimento_B
+    anos_Necessários += 1
 
+print(anos_Necessários)
